@@ -96,11 +96,14 @@ li{
     line-height: 20px;
 }
 
-.desktop-action .hamburger{
-    font-size: 1.5rem;
-    display: none;
+.desktop-actions .hamburger {
+  font-size: 1.5rem;
+  display: none;
 }
 
+.mobile-menu {
+  display: none;
+}
 
 
 
@@ -143,3 +146,41 @@ li{
 
 
 /* Media Queries */ 
+@media screen and (max-width: 780px) {
+
+  /* hide desktop nav links */
+  .navlist {
+    display: none;
+  }
+
+  /* hide Sign-In button */
+  .desktop-actions .btn {
+    display: none;
+  }
+
+  /* show hamburger on mobile */
+  .desktop-actions .hamburger {
+    display: block;
+  }
+
+  /* show mobile menu (optional auto display) */
+ .mobile-menu {
+  display: none;                /* hidden by default */
+  position: fixed;              /* center on full screen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  width: 20rem;
+  background: var(--pure-white);
+  border: .1rem solid var(--gold-finger);
+  border-radius: .5rem;
+  text-align: center;
+  z-index: 999;
+}
+    .mobile-menu.active {
+    display: flex;               /* show when active */
+    }
+    }
