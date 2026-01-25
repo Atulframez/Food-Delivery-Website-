@@ -107,7 +107,7 @@ li{
 }
 
 .desktop-action hamburger{
-    font-size: 1.5rem
+    font-size: 1.5rem;
     display: none;
 }
 
@@ -193,7 +193,14 @@ li{
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20rem;
+        padding: 2rem;
+        background-color: var(--pure-white);
+        border: .1rem solid var(--gold-finger);
     }
 }
 
